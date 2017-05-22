@@ -19,6 +19,6 @@ app.get('/', (req, res) => {
   res.send('DMO Server Root..')
 });
 
-app.listen(port, () => {
+app.listen(port, ip, () => {
   console.log('DMO server listening on port '+port+'!')
 });
