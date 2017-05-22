@@ -3,6 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var app = module.exports = express();
+var port = parseInt(process.env.OPENSHIFT_NODEJS_PORT) || 7747;
 
 app.use(cors());
 
@@ -17,6 +18,6 @@ app.get('/', (req, res) => {
   res.send('DMO Server Root..')
 });
 
-app.listen(7747, () => {
-  console.log('DMO server listening on port 7747!')
+app.listen(port, () => {
+  console.log('DMO server listening on port '+port+'!')
 });
