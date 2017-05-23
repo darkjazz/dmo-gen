@@ -1,4 +1,4 @@
-var CouchDB = require('node-couchdb');
+// var CouchDB = require('node-couchdb');
 
 const dbName = "feature_db";
-const couch = new CouchDB();
+// const couch = new CouchDB();

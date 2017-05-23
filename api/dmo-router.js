@@ -10,4 +10,11 @@ dmoRouter.get('/create_uri', function(req, res) {
   res.send(dmo.create_uri())
 });
 
+dmoRouter.get('/artist/:id', function (req, res) {
+  var id = req.params.id;
+  dmo.get_artist_yago(id, req.app.locals.couchdb, function(artist) {
+    res.send(artist);
+  })
+});
+
 module.exports = dmoRouter;

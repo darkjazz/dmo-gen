@@ -11,6 +11,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.locals.couchdb = require('./couch');
+
 app.use('/dmo', require('./api/dmo-router'));
 app.use('/features', require('./api/features-router'));
 app.use('/musicbrainz', require('./api/musicbrainz-router'));
