@@ -3,7 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var app = module.exports = express();
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 7747;
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 app.use(cors());
