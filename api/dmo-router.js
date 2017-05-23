@@ -6,4 +6,8 @@ dmoRouter.get('/', function(req, res) {
   res.send('dmo module root')
 });
 
+dmoRouter.get('/create_uri', function(req, res) {
+  res.send(dmo.create_uri())
+});
+
 module.exports = dmoRouter;
