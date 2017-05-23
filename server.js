@@ -15,10 +15,10 @@ app.use('/dmo', require('./api/dmo-router'));
 app.use('/features', require('./api/features-router'));
 app.use('/musicbrainz', require('./api/musicbrainz-router'));
 
-app.get('/', (req, res) => {
+app.get('/', function(req, res) {
   res.send('DMO Server Root..')
 });
 
-app.listen(port, ip, () => {
+app.listen(port, ip, function() {
   console.log('DMO server listening on port '+port+'!')
 });
